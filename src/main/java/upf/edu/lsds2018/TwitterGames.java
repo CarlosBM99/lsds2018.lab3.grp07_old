@@ -1,5 +1,8 @@
 package upf.edu.lsds2018;
 
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
 import upf.edu.lsds2018.model.SimplifiedTweet;
 
 
@@ -10,6 +13,7 @@ public class TwitterGames {
         SparkConf conf = new SparkConf().setAppName("Twitter Games");
         JavaSparkContext sparkContext = new JavaSparkContext(conf);
 
+        
         // Load input
         JavaRDD<String> stringRDD = sparkContext.textFile(inputDir);
         JavaRDD<SimplifiedTweet> tweets = // transform the stringRDD

@@ -1,2 +1,8 @@
 .idea/
 *.iml
+
+twitter-data-from-2018-eurovision-final/
+
+target/
+
+\.DS_Store
